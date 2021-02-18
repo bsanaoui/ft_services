@@ -1,0 +1,40 @@
+/***********************************************/
+Docker Commads :
+
+    docker build -t mysql .
+    docker ps -a
+    docker run -d -it mysql (run in background)
+    docker run -p 3306:3306 -itd --name mysql_c mysql
+    docker rm -f id_container (shutdown)
+    docker image ls
+
+
+/***********************************************/
+   
+Clean =
+rm -r ~/Library/Caclslshes/*; rm ~/.zcompdump*; brew cleanup
+
+/*********************************************/
+Load Balancer :
+    * Distributes client requests or network load efficiently across multiple servers
+    * Ensures high availability and reliability by sending requests only to servers that are online
+    * Provides the flexibility to add or subtract servers as demand dictates
+
+TO DO:
+    - MySQL
+    - PhpMyAdmin
+    - Nginx
+    - WordPress
+    - FTPS
+    - InfluxDB
+
+/*****************************************/
+brew install docker
+brew install docker-machine
+
+printenv
+export PATH="$PATH:/Volumes/USB-FIT/InstalledApp/homebrew/bin"
+export MINIKUBE_HOME="Volumes/USB-FIT/InstalledApp/minikube"
+vim .zshrc
+source .zshrc
+/***************************************/
