@@ -5,4 +5,4 @@ COPY config.sh /tmp
 RUN sh /tmp/config.sh
 
 #To start service mysql
-ENTRYPOINT mysqld --user=mysql
+ENTRYPOINT mysqld --user=mysql 

@@ -7,8 +7,11 @@ Docker Commads :
     docker run -p 3306:3306 -itd --name mysql_c mysql
     docker rm -f id_container (shutdown)
     docker image ls
+    docker exec -it ee8 sh
+    docker images purge
 
-
+    find / -name php5
+    nginx -s reload
 /***********************************************/
    
 Clean =

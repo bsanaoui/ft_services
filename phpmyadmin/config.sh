@@ -1,3 +1,7 @@
-mysql_install_db --user=mysql --datadir=/var/lib/mysql  
-mkdir /run/mysqld
-chown -R  mysql:mysql /run/mysqld
+mkdir /run/nginx
+chmod 775 config.inc.php
+
+# running
+php-fpm7
+nginx -g "daemon off;" &
+exec /bin/shß
