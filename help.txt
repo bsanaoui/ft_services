@@ -1,10 +1,7 @@
 /***********************************************/
 Docker Commads :
-
     docker build -t mysql .
     docker ps -a
-    docker run -d -it mysql (run in background)
-    docker run -p 3306:3306 -itd --name mysql_c mysql
     docker rm -f id_container (shutdown)
     docker image ls
     docker exec -it ee8 sh
@@ -12,6 +9,13 @@ Docker Commads :
 
     find / -name php5
     nginx -s reload
+    docker rm -f $(docker ps -aq)  (delete all Containers)
+        /******** RUN Docker Containers ******/
+
+    docker run -p 3306:3306 -itd --name mysql_c mysql
+    docker run -p 5050:80 -it --name wordpress_c wordpress
+    docker run -p 80:80 --name phpmyadmin_c -it phpmyadmin
+
 /***********************************************/
    
 Clean =
