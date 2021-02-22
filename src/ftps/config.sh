@@ -3,5 +3,5 @@ echo "cmos:123456" | chpasswd
 
 
 # running
-vsftpd &
+vsftpd /etc/vsftpd/vsftpd.conf &
 exec /bin/sh

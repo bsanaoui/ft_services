@@ -1,6 +1,6 @@
 FROM alpine:3.7
 RUN apk update
-RUN apk add vsftpd vim
+RUN apk add vsftpd
 
 RUN mkdir /etc/cert
 COPY vsftpd.pem /etc/cert

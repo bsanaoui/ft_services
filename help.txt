@@ -10,12 +10,13 @@ Docker Commads :
     find / -name php5
     nginx -s reload
     docker rm -f $(docker ps -aq)  (delete all Containers)
+    pkill procces
         /******** RUN Docker Containers ******/
 
     docker run -p 3306:3306 -itd --name mysql_c mysql
     docker run -p 5050:80 -it --name wordpress_c wordpress
     docker run -p 80:80 --name phpmyadmin_c -it phpmyadmin
-
+    docker run -p 20:20 -p 21:21 -p 30000:30000 -it --name ftps_c ftps
 /***********************************************/
    
 Clean =
