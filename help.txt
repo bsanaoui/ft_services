@@ -17,6 +17,7 @@ Docker Commads :
     docker run -p 5050:80 -it --name wordpress_c wordpress
     docker run -p 80:80 --name phpmyadmin_c -it phpmyadmin
     docker run -p 20:20 -p 21:21 -p 30000:30000 -it --name ftps_c ftps
+    docker run -p 8086:8086 -it --name influxdb_c influxdb
 /***********************************************/
    
 Clean =
@@ -45,4 +46,7 @@ export PATH="$PATH:/Volumes/USB-FIT/InstalledApp/homebrew/bin"
 export MINIKUBE_HOME="Volumes/USB-FIT/InstalledApp/minikube"
 vim .zshrc
 source .zshrc
-/***************************************/
+/*******************  TUTO   ***************/
+
+cluster is : 
+    
