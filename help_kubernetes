@@ -36,6 +36,8 @@ kubectl get replicaset
 ** Apply Yaml File
     kubectl apply -f phpmyadmin-depl.yaml
 
+** kubectl describe service phpmyadmin-service
+minikube service phpmyadmin-service
 /******************************  TUTO   *********************************/
 
 A Kubernetes cluster : is a set of nodes that run containerized applications
