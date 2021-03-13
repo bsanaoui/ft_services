@@ -1,0 +1,50 @@
+Setup Minikube and docker :
+ ** minikube docker-env
+/****************************** Commads general ********************************/
+
+
+    kubectl create deployment kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1
+    kubectl get deployments
+    kubectl proxy
+
+    export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
+    echo Name of the Pod: $POD_NAME
+
+    kubectl get pods    
+    kubectl describe pods
+    kubectl logs $POD_NAME
+
+** Execute on the container
+    kubectl exec $POD_NAME env
+
+** start a bash session
+    kubectl exec -ti $POD_NAME bash
+
+
+/****************************** Commads Minikube (kubectl) ********************************/
+
+minikube start --vm-driver=hyperkit   // Debug Mode ->  minikube start --v=7 --alsologtostderr
+minikube status
+minikube delete (delete all cluster)
+kubectl create deployment phpmyadmin-depl --image=phpmyadmin (** Create deployment)
+kubectl get replicaset
+
+** Edit deployment
+    kubectl edit deployment name-depl
+** pods terminal exec
+    kubectl exec -it phpmyadmin-depl-7c44b595bf-62v28 -- /bin/sh
+** Apply Yaml File
+    kubectl apply -f phpmyadmin-depl.yaml
+
+/******************************  TUTO   *********************************/
+
+A Kubernetes cluster : is a set of nodes that run containerized applications
+
+
+/***************************  Yaml File **********************************/
+
+1) Metadata
+
+2) Specification
+
+3) Status (auto generated)

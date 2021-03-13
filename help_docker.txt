@@ -46,7 +46,4 @@ export PATH="$PATH:/Volumes/USB-FIT/InstalledApp/homebrew/bin"
 export MINIKUBE_HOME="Volumes/USB-FIT/InstalledApp/minikube"
 vim .zshrc
 source .zshrc
-/*******************  TUTO   ***************/
 
-cluster is : 
-    
