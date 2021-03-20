@@ -38,6 +38,7 @@ kubectl get replicaset
 
 ** kubectl describe service phpmyadmin-service
 minikube service phpmyadmin-service
+
 /******************************  TUTO   *********************************/
 
 A Kubernetes cluster : is a set of nodes that run containerized applications
