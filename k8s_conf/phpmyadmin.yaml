@@ -20,13 +20,12 @@ spec:
         imagePullPolicy: Never
         ports:
         - containerPort: 80
-        env:
-        - name: 
+
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: phpmyadmin-service
+  name: phpmyadmin
 spec:
   selector:
     app: phpmyadmin
