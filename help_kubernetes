@@ -51,3 +51,6 @@ A Kubernetes cluster : is a set of nodes that run containerized applications
 2) Specification
 
 3) Status (auto generated)
+
+/*************************** Instructions **********************************/
+1) Enable MetalLB (LoadBalancer)
