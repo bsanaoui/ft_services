@@ -54,3 +54,8 @@ A Kubernetes cluster : is a set of nodes that run containerized applications
 
 /*************************** Instructions **********************************/
 1) Enable MetalLB (LoadBalancer)
+  - create configMap of metallb
+  - enable metallb (minikube addons enable metallb)
+  - apply configMap metallb
+
+2) 
