@@ -10,14 +10,16 @@ else
 
         mysqld --user=mysql & 
 
-        # mysqladmin --silent --wait=30 ping || exit 1
+        sleep 5
 
-        mysql -u root -e "CREATE USER 'admin'@'%' IDENTIFIED BY '1234'"
-        mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%'"
-        mysql -u root -e "CREATE DATABASE wordpress"\
-
-                #  -e "CREATE DATABASE wordpress;" \
-                #  -e "CREATE DATABASE phpmyadmin;" \
+        mysql -u root\
+        -e "CREATE DATABASE wordpress;" \
+        -e "CREATE DATABASE phpmyadmin;"\
+        -e "CREATE USER 'admin'@'%' IDENTIFIED BY '1234';"\
+        -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%';"\
+        -e "CREATE USER 'pma'@'%' IDENTIFIED BY 'pmapass';"\
+        -e "GRANT ALL PRIVILEGES ON *.* TO 'pma'@'%' WITH GRANT OPTION;"
+       
 
         pkill mysqld
 

@@ -18,6 +18,7 @@ Docker Commads :
     docker run -p 80:80 --name phpmyadmin_c -it phpmyadmin
     docker run -p 20:20 -p 21:21 -p 30000:30000 -it --name ftps_c ftps
     docker run -p 8086:8086 -it --name influxdb_c influxdb
+    --no-cache
 /***********************************************/
    
 Clean =

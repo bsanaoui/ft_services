@@ -7,7 +7,5 @@ COPY my.cnf /tmp
 
 RUN mkdir /run/mysqld && chown -R mysql:mysql /run/mysqld
 
-
-VOLUME /var/lib/mysql
 #To start service mysql
 ENTRYPOINT sh /tmp/config.sh

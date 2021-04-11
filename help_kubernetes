@@ -1,5 +1,6 @@
 Setup Minikube and docker :
  ** minikube docker-env
+    eval $(minikube -p minikube docker-env)
 /****************************** Commads general ********************************/
 
 
