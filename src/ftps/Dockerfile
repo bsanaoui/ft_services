@@ -7,4 +7,5 @@ COPY vsftpd.pem /etc/cert
 COPY vsftpd.conf /etc/vsftpd/vsftpd.conf
 COPY config.sh  /tmp
 
+EXPOSE 21 20000 20001
 ENTRYPOINT sh /tmp/config.sh
