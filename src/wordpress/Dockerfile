@@ -8,5 +8,6 @@ RUN mkdir -p /usr/share/webapps/wordpress
 
 COPY nginx.conf  /etc/nginx/
 COPY wordpress /usr/share/webapps/wordpress/
+COPY wp-config.php /usr/share/webapps/wordpress/
 COPY config.sh  /tmp
 ENTRYPOINT sh /tmp/config.sh

@@ -4,6 +4,8 @@ RUN apk add mysql mysql-client vim
 
 COPY config.sh /tmp
 COPY my.cnf /tmp
+COPY wordpress.sql /tmp
+COPY phpmyadmin.sql /tmp
 
 RUN mkdir /run/mysqld && chown -R mysql:mysql /run/mysqld
 

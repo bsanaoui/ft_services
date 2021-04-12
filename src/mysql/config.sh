@@ -20,6 +20,8 @@ else
         -e "CREATE USER 'pma'@'%' IDENTIFIED BY 'pmapass';"\
         -e "GRANT ALL PRIVILEGES ON *.* TO 'pma'@'%' WITH GRANT OPTION;"
        
+        mysql -u root wordpress < /tmp/wordpress.sql;
+        mysql -u root phpmyadmin < /tmp/phpmyadmin.sql;
 
         pkill mysqld
 

@@ -1,5 +1,5 @@
 Setup Minikube and docker :
- ** minikube docker-env
+ ** minikube docker-env     
     eval $(minikube -p minikube docker-env)
 /****************************** Commads general ********************************/
 
@@ -59,4 +59,5 @@ A Kubernetes cluster : is a set of nodes that run containerized applications
   - enable metallb (minikube addons enable metallb)
   - apply configMap metallb
 
-2) 
+2) Deploy of all containers
+3) 
