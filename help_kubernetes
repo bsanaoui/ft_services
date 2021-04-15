@@ -19,7 +19,7 @@ Setup Minikube and docker :
     kubectl exec $POD_NAME env
 
 ** start a bash session
-    kubectl exec -ti $POD_NAME bash
+    kubectl exec -ti $POD_NAME sh
 
 
 /****************************** Commads Minikube (kubectl) ********************************/
