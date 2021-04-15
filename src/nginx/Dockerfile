@@ -8,5 +8,10 @@ RUN apk add nginx php7-fpm php7-common php7-iconv php7-json php7-gd \
 
 
 COPY config.sh  /tmp
+COPY start.sh /tmp
+COPY default.conf /etc/nginx/conf.d/
+RUN mkdir -p /var/www/localhost/html
+COPY index.html /var/www/localhost/html/
+RUN sh /tmp/config.sh
 
-ENTRYPOINT sh /tmp/config.sh
+ENTRYPOINT sh /tmp/start.sh
