@@ -1,3 +1,2 @@
-/tmp/influxdb2-2.0.4-linux-amd64/influxd
-
-# running
+/usr/sbin/influxd
+telegraf --config /etc/telegraf/telegraf.conf &

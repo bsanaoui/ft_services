@@ -23,15 +23,22 @@ spec:
         volumeMounts:
           - name: influxdb-persistent-storage
             mountPath: /root/.influxdbv2
+          - name: docker-storage
+            mountPath: /var/run/docker.sock
       volumes:
       - name: influxdb-persistent-storage
         persistentVolumeClaim:
           claimName: influx-pv-claim
+      - name: docker-storage
+        hostPath:
+          path: /var/run/docker.sock
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: influxdb
+  annotations:
+    metallb.universe.tf/allow-shared-ip: shared
 spec:
   selector:
     app: influxdb

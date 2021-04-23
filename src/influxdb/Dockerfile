@@ -1,9 +1,14 @@
-FROM alpine:3.7
-RUN apk update
-RUN apk add vim && \
-    cd /tmp && wget https://dl.influxdata.com/influxdb/releases/influxdb2-2.0.4-linux-amd64.tar.gz && \
-    tar xvfz influxdb2-2.0.4-linux-amd64.tar.gz
+FROM alpine:3.12
 
+RUN apk update
+RUN apk add influxdb --no-cache
+RUN apk add telegraf --no-cache --repository http://dl-2.alpinelinux.org/alpine/edge/community
+
+RUN apk add vim
+
+RUN mkdir -p /etc/telegraf
+COPY telegraf.conf /etc/telegraf/telegraf.conf
 COPY config.sh  /tmp
+
 VOLUME /root/.influxdbv2
 ENTRYPOINT sh /tmp/config.sh
