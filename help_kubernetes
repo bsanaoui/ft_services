@@ -1,3 +1,13 @@
+/****************************** Shell ******************************************/
+-ge : >=
+-lt : <
+-eq : ==
+-ne : != 
+grev -v : display all except the value 
+grep -c :
+wc -l : number of line
+
+/*******************************************************************************/
 Setup Minikube and docker :
  ** minikube docker-env     
     eval $(minikube -p minikube docker-env)
@@ -60,4 +70,7 @@ A Kubernetes cluster : is a set of nodes that run containerized applications
   - apply configMap metallb
 
 2) Deploy of all containers
-3) 
+3) SSH fix /Users/bsanaoui/.ssh delete IP restrected 
+
+
+* 928 dashboard grafana plugin 
