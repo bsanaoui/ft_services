@@ -1,5 +1,7 @@
 # running
-mkdir /run/nginx
+openrc reboot
+# mkdir /run/nginx
 telegraf --config /etc/telegraf/telegraf.conf &
-php-fpm7
-nginx -g "daemon off;"
+rc-service php-fpm7 start
+rc-service nginx start
+tail -f /dev/null
