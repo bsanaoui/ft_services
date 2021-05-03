@@ -74,3 +74,12 @@ A Kubernetes cluster : is a set of nodes that run containerized applications
 
 
 * 928 dashboard grafana plugin 
+
+Grafana import
+kubectl cp grafana-depl-bb9445448-c6559:/usr/share/grafana/data/grafana.db ./grafana.db
+
+wordpress admin admin
+mysql admin 1234
+grafana admin 123456
+ssh cmos 1234
+ftps cmos 123456

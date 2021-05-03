@@ -23,7 +23,7 @@ spec:
               command:
               - sh
               - tmp/healthy.sh
-            initialDelaySeconds: 19
+            initialDelaySeconds: 20
             periodSeconds: 5
 
 ---

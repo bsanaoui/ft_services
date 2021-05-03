@@ -1,3 +1,4 @@
 # running
 telegraf --config /etc/telegraf/telegraf.conf &
-grafana-server -config /usr/share/grafana/conf/defaults.ini -homepath /usr/share/grafana
+grafana-server -config /usr/share/grafana/conf/defaults.ini -homepath /usr/share/grafana &
+tail -F /dev/null

@@ -29,4 +29,5 @@ fi
 rm /etc/my.cnf.d/mariadb-server.cnf
 mv /tmp/my.cnf /etc/my.cnf.d/mariadb-server.cnf
 mysqld --user=mysql &
-telegraf --config /etc/telegraf/telegraf.conf
+telegraf --config /etc/telegraf/telegraf.conf &
+tail -F /dev/null

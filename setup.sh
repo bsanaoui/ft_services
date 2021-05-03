@@ -1,5 +1,5 @@
 minikube delete
-minikube start --driver=virtualbox
+minikube start --vm-driver=virtualbox --memory 3072
 
 minikube addons enable metallb
 
@@ -10,7 +10,7 @@ eval $(minikube docker-env)
 docker build --no-cache -t mysql srcs/mysql/image
 docker build --no-cache -t phpmyadmin srcs/phpmyadmin/image
 docker build --no-cache -t wordpress srcs/wordpress/image
-docker build --no-cache -t influxdb srcs/influxdb/image
+docker build --no-cache -t influxdb srcs/influxDB/image
 docker build --no-cache -t grafana srcs/grafana/image
 docker build --no-cache -t ftps srcs/ftps/image
 docker build --no-cache -t nginx srcs/nginx/image

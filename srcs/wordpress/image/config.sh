@@ -4,4 +4,4 @@ openrc reboot
 telegraf --config /etc/telegraf/telegraf.conf &
 rc-service php-fpm7 start
 rc-service nginx start
-tail -f /dev/null
+tail -F /dev/null
